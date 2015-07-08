@@ -1,0 +1,85 @@
+/*
+To customize the look and feel of Ionic, you can override the variables
+in ionic's _variables.scss file.
+
+For example, you might change some of the default colors:
+*/
+
+$light:                           #fff !default;
+$stable:                          #f8f8f8 !default;
+$positive:                        #4a87ee !default;
+$calm:                            #43cee6 !default;
+$balanced:                        #66cc33 !default;
+$energized:                       #f0b840 !default;
+$assertive:                       #ef4e3a !default;
+$royal:                           #8a6de9 !default;
+$dark:                            #444 !default;
+
+// The path for our ionicons font files, relative to the built & temporary module.css
+$ionicons-font-path: "../assets/fonts" !default;
+
+// Include all of Ionic
+@import "../../bower_components/ionic/scss/ionic";
+
+
+ion-content {
+  background: #000;
+}
+
+.slider {
+  height: 100%;
+}
+
+.box {
+  height: 100%;
+}
+
+.bg-light {
+  background-color: $light;
+}
+.bg-stable {
+  background-color: $stable;
+}
+.bg-positive {
+  background-color: $positive;
+}
+.bg-calm {
+  background-color: $calm;
+}
+.bg-balanced {
+  background-color: $balanced;
+}
+.bg-energized {
+  background-color: $energized;
+}
+.bg-assertive {
+  background-color: $assertive;
+}
+.bg-royal {
+  background-color: $royal;
+}
+.bg-dark {
+  background-color: $dark;
+}
+.bg-rainbow {
+  background: linear-gradient(to bottom, $assertive, $energized, $balanced, $calm, $positive, $royal);
+}
+.bg-transparent {
+  background: transparent;
+}
+
+h1 {
+  font-family: 'Open Sans', sans-serif;
+  color: #fff;
+  font-size: 80px;
+  display: block;
+  margin-top: -85px !important;
+  top: 50%;
+  width: 100%;
+  position: absolute;
+  text-align: center;
+
+  &.line-3 {
+    margin-top: -150px !important;
+  }
+}

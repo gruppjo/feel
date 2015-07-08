@@ -1,0 +1,17 @@
+{
+  "generator-m": {
+    "answers": {
+      "appName": "feel",
+      "appId": "com.mway.feel",
+      "bowerPackages": [
+        "angular-translate#~2.7.0",
+        "angular-translate-loader-static-files#~2.7.0"
+      ],
+      "platforms": [
+        "android"
+      ],
+      "plugins": [],
+      "appModule": "feel"
+    }
+  }
+}

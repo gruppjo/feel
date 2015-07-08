@@ -1,0 +1,50 @@
+<ion-view view-title="main module">
+  <!-- do you want padding? -->
+  <ion-content scroll="false" class="bg-rainbow" contentiseditable>
+
+    <!-- content goes here -->
+    <ion-slide-box
+      on-slide-changed="slideHasChanged($index)"
+      show-pager="true"
+      ng-click="ctrl.next()">
+      <ion-slide>
+        <div class="box bg-rainbow">
+          <h1 class="line-3">FEEL<br>THE<br>LOVE</h1>
+        </div>
+      </ion-slide>
+      <ion-slide>
+        <div class="box bg-assertive"><h1>YOU</h1></div>
+      </ion-slide>
+      <ion-slide>
+        <div class="box bg-energized"><h1>ARE</h1></div>
+      </ion-slide>
+      <ion-slide>
+        <div class="box bg-balanced"><h1>A</h1></div>
+      </ion-slide>
+      <ion-slide>
+        <div class="box bg-calm"><h1>FUCKING</h1></div>
+      </ion-slide>
+      <ion-slide>
+        <div class="box bg-positive"><h1>FAGGOT</h1></div>
+      </ion-slide>
+      <ion-slide>
+        <div class="box bg-royal"><h1>GIO</h1></div>
+      </ion-slide>
+      <ion-slide>
+        <div class="box bg-rainbow"><h1>&lt;3</h1></div>
+      </ion-slide>
+    </ion-slide-box>
+
+    <ion-footer-bar align-title="left" class="bar-light">
+      <div class="buttons" ng-click="ctrl.previous()">
+        <button class="button">Back</button>
+      </div>
+      <h1 class="title"></h1>
+      <div class="buttons" ng-click="ctrl.next()">
+        <button class="button">Next</button>
+      </div>
+    </ion-footer-bar>
+
+
+  </ion-content>
+</ion-view>
