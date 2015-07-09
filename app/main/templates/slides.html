@@ -114,7 +114,7 @@
       <ion-slide>
         <div class="box bg-light">
           <div>
-          Recent studies show that approximately <span class="big">{{ctrl.lgbtData[0].count | number}} %</span> of the American population identifies as LBGT. <span class="cite">[2]</span> This number rises to <span class="big">16-21%</span> when accounting for LBGT attraction and/or behavior. <span class="cite">[3]</span> So this equals <span class="big">8 to 48 years</span> to look at them.<br><br>
+          Recent studies show that approximately <span class="big">{{ctrl.lgbtData[0].count | number}} %</span> of the American population identifies as LBGT. <span class="cite">[2]</span> This number rises to <span class="big">16-21%</span> when accounting for LBGT attraction and/or behavior. <span class="cite">[3]</span> It would take you between <span class="big">8 and 48 years</span>.<br><br>
             <pie-chart
               data="ctrl.lgbtData"
               colors="ctrl.lgbtColors">
@@ -137,7 +137,7 @@
                 <i class="icon ion-person-add pink"></i>
               </div>
               <br><br>
-              <span class="big">&nbsp;</span><span class="big" ng-if="ctrl.answers.marriage">{{ctrl.answers.marriage | number}}</span><span class="big">&nbsp;</span>
+              <span class="big">&nbsp;</span><span class="big" ng-if="ctrl.answers.marriage">{{ctrl.answers.marriage | number}} people</span><span class="big">&nbsp;</span>
             </div>
           </div>
         </div>
@@ -163,7 +163,7 @@
       <ion-slide>
         <div class="box bg-light">
           <div>
-            Well, yes and no. Because this also means that most of the remaining <span class="big assertive">6.16 billion</span> people's governments (including Germany's) do not see all love as equal.
+            Well, yes and no. Because this also means that most of the remaining <span class="big assertive">6.16 billion</span> peoples' governments (including Germany's) do not see all love as equal.
             <br><br>
                 <i class="insaner icon ion-heart-broken assertive"></i>
             <br><br>
@@ -187,7 +187,7 @@
                 <i class="icon ion-ios-bolt royal"></i>
               </div>
               <br><br>
-              <span class="big">&nbsp;</span><span class="big" ng-if="ctrl.answers.illegal">{{ctrl.answers.illegal | number}}</span><span class="big">&nbsp;</span>
+              <span class="big">&nbsp;</span><span class="big" ng-if="ctrl.answers.illegal">{{ctrl.answers.illegal | number}} people</span><span class="big">&nbsp;</span>
             </div>
           </div>
         </div>
@@ -204,7 +204,7 @@
               colors="ctrl.illegalColors">
             </pie-chart>
             <br><br>
-            Another <span class="big dark">2.7 billion's</span> governments do <span class="big dark">not protect</span> the rights of LGBT. <span class="cite">[5]</span>
+            Another <span class="big dark">2.7 billions'</span> governments do <span class="big dark">not protect</span> the rights of LGBT. <span class="cite">[5]</span>
           </div>
         </div>
       </ion-slide>
@@ -266,7 +266,7 @@
           <div>
             Find out where we are:
             <br><br>
-            <div class="list">
+            <div class="list info">
               <a class="item item-icon-left item-icon-right"
                 href="http://facebook.com/feelthelove2015" target="_blank">
                 <i class="icon ion-social-facebook positive"></i>
@@ -288,7 +288,7 @@
             </div>
 
             Or:<br><br>
-            <div class="list">
+            <div class="list info">
               <a class="item item-icon-left item-icon-right"
                 ui-sref="info"
                 target="_blank">

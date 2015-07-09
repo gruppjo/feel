@@ -4,8 +4,8 @@ angular.module('main')
 
   // debug
   this.debug = {
-    on: false,
-    slide: 21
+    on: true,
+    slide: 17
   };
 
   // settings
