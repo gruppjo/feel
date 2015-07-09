@@ -29,7 +29,7 @@ angular.module('main', [
     /* global document */
     var $container = document.getElementById('main-container');
     var aspectRation = $container.offsetWidth / $container.offsetHeight;
-    if (aspectRation > 2 / 2.8 && !alertPopup) {
+    if (aspectRation > 2 / 2.5 && !alertPopup) {
       alertPopup = $ionicPopup.alert({
         title: 'Careful',
         template: 'Optimized for mobile in portrait mode. Switch to portrait mode on your device or resize your desktop browser to be much higher than wide! '
@@ -39,9 +39,6 @@ angular.module('main', [
         if (promise) {
           $timeout.cancel(promise);
         }
-        promise = $timeout(function () {
-          checkSize();
-        }, 1000);
       });
     }
   };
