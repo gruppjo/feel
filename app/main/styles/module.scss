@@ -6,14 +6,18 @@ For example, you might change some of the default colors:
 */
 
 $light:                           #fff !default;
-$stable:                          #f8f8f8 !default;
+$stable:                          #f3f3f3 !default;
 $positive:                        #4a87ee !default;
 $calm:                            #43cee6 !default;
 $balanced:                        #66cc33 !default;
-$energized:                       #f0b840 !default;
+$energized:                       #e0a830 !default;
 $assertive:                       #ef4e3a !default;
 $royal:                           #8a6de9 !default;
 $dark:                            #444 !default;
+
+$pink: #FF69B4;
+
+$bar-height: 36px;
 
 // The path for our ionicons font files, relative to the built & temporary module.css
 $ionicons-font-path: "../assets/fonts" !default;
@@ -21,65 +25,264 @@ $ionicons-font-path: "../assets/fonts" !default;
 // Include all of Ionic
 @import "../../bower_components/ionic/scss/ionic";
 
-
-ion-content {
-  background: #000;
+#main-container {
+  max-width: 500px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
 }
 
+// hello slider
 .slider {
   height: 100%;
 }
 
-.box {
-  height: 100%;
+.slider-pager {
+  top:0px;
+  bottom: auto !important;
+
+  > span {
+    width: 8px !important;
+    color: #aaa !important;
+
+    > i {
+      font-size: 69% !important;
+    }
+  }
 }
 
+.box {
+  height: 100%;
+  transform-style: preserve-3d;
+
+  .white {
+    color: #fff;
+  }
+
+  .black {
+    color: #000;
+  }
+
+  .light {
+    color: $light;
+  }
+  .stable {
+    color: $stable;
+  }
+  .stabler {
+    color: #aaa;
+  }
+  .positive {
+    color: $positive;
+  }
+  .calm {
+    color: $calm;
+  }
+  .balanced {
+    color: $balanced;
+  }
+  .energized {
+    color: $energized;
+  }
+  .assertive {
+    color: $assertive;
+  }
+  .royal {
+    color: $royal;
+  }
+  .dark {
+    color: $dark;
+  }
+  .pink {
+    color: $pink;
+  }
+
+  .gender-caption {
+    margin-top:10px;
+  }
+
+  .tiny {
+    font-size: 8px;
+    line-height: 9px;
+    &::before {
+      font-size: 8px;
+    }
+  }
+
+  .insane {
+    font-size: 150px;
+    font-weight:800;
+    &::before {
+      font-size: 85px;
+    }
+  }
+  .insanest {
+    font-size: 230px;
+    font-weight:800;
+    &::before {
+      font-size: 123px;
+    }
+  }
+
+  .insaner {
+    font-size: 180px;
+    font-weight:800;
+    &::before {
+      line-height: 145px;
+    }
+  }
+
+  .huge {
+    font-size: 80px;
+    font-weight:800;
+  }
+
+  .biggest {
+    font-size: 30px;
+    font-weight:800;
+    &::before {
+      font-size: 30px;
+    }
+  }
+
+  .bigger {
+    font-size: 20px;
+    font-weight:800;
+    &::before {
+      font-size: 20px;
+    }
+  }
+
+  .big {
+    font-size: 16px;
+    font-weight:800;
+    &::before {
+      font-size: 16px;
+    }
+  }
+
+  .bold {
+    font-weight:800;
+  }
+
+  .cite {
+    font-size: 10px;
+    color: $positive;
+    &::before {
+      font-size: 10px;
+    }
+    vertical-align:super
+  }
+
+  h2 {
+    font-size: 80px;
+    font-weight:800;
+    line-height: 70px;
+  }
+
+  > * {
+    padding:25px;
+    width: 100%;
+    text-align:center;
+    position: relative;
+    top: 50%;
+    margin-top: -$bar-height/2 + 10; // footer bar + pager
+    transform: translateY(-50%);
+  }
+
+  div.list {
+    text-align: left;
+  }
+}
+
+// svg
+.legend {
+    font-size: 12px;
+  }
+rect {
+  stroke-width: 2;
+}
+
+// footer
+.bar-footer {
+  padding:0;
+  button {
+    width:50%;
+    margin: 0 !important;
+    border:0 !important;
+    border-radius:0 !important;
+
+    &:last-child {
+      position:relative !important;
+      top:0 !important;
+      right:0 !important;
+      bottom:0 !important;
+    }
+  }
+}
+
+// header
+
+.bar-header {
+  button {
+    margin-top:-4px;
+  }
+  .small {
+    font-size:15px;
+  }
+
+  i {
+    font-size:8px;
+    color: #bbb;
+
+    &::before {
+      font-size: 18px !important;
+      line-height: 33px !important;
+    }
+  }
+
+}
+
+
+// backgrounds
+.bg-rainbow {
+  background: linear-gradient(to bottom, $assertive, $energized, $balanced, $calm, $positive, $royal, $pink);
+}
+.bg-transparent {
+  background: transparent;
+}
 .bg-light {
   background-color: $light;
 }
 .bg-stable {
   background-color: $stable;
 }
-.bg-positive {
-  background-color: $positive;
-}
-.bg-calm {
-  background-color: $calm;
-}
-.bg-balanced {
-  background-color: $balanced;
-}
-.bg-energized {
-  background-color: $energized;
+.bg-dark {
+  background-color: $dark;
 }
 .bg-assertive {
   background-color: $assertive;
 }
+.bg-energized {
+  background-color: $energized;
+}
+.bg-balanced {
+  background-color: $balanced;
+}
+.bg-calm {
+  background-color: $calm;
+}
+.bg-positive {
+  background-color: $positive;
+}
 .bg-royal {
   background-color: $royal;
 }
-.bg-dark {
-  background-color: $dark;
-}
-.bg-rainbow {
-  background: linear-gradient(to bottom, $assertive, $energized, $balanced, $calm, $positive, $royal);
-}
-.bg-transparent {
-  background: transparent;
+.bg-pink {
+  background-color: $pink;
 }
 
-h1 {
-  font-family: 'Open Sans', sans-serif;
-  color: #fff;
-  font-size: 80px;
-  display: block;
-  margin-top: -85px !important;
-  top: 50%;
-  width: 100%;
-  position: absolute;
-  text-align: center;
-
-  &.line-3 {
-    margin-top: -150px !important;
-  }
-}
