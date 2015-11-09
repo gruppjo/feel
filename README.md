@@ -1,3 +1,11 @@
+# Feel The Love 2015
+
+## Todo
+- loading screen
+- improve wording
+- better desktop support
+
+
 # Generator-M v1.2.0
 
 [![NPM version](http://img.shields.io/npm/v/generator-m.svg?style=flat-square)][npm-url]
