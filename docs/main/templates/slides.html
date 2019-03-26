@@ -1,0 +1,321 @@
+<ion-view view-title="Feel The Love 2015">
+  <!-- do you want padding? -->
+  <ion-content scroll="false"  class="bg-transparent">
+
+    <!-- content goes here -->
+    <ion-slide-box
+      on-slide-changed="ctrl.slideHasChanged($index)"
+      ng-click="ctrl.start()"
+      show-pager="true">
+
+      <!-- SLIDE 0 -->
+      <ion-slide>
+        <div class="box bg-light">
+          <img src="main/assets/images/matroschka.png" width="100%">
+        </div>
+      </ion-slide>
+      <ion-slide>
+      <div class="box bg-assertive"><h2 class="white">Honey<br><i class="icon ion-heart"></i></h2></div>
+      </ion-slide>
+      <ion-slide>
+        <div class="box bg-pink"><h2 class="white">we'll</h2></div>
+      </ion-slide>
+      <ion-slide>
+        <div class="box bg-balanced"><h2 class="white">teach</h2></div>
+      </ion-slide>
+      <ion-slide>
+        <div class="box bg-calm"><h2 class="white">you</h2></div>
+      </ion-slide>
+      <ion-slide>
+        <div class="box bg-positive"><h2 class="white">some</h2></div>
+      </ion-slide>
+      <ion-slide>
+        <div class="box bg-rainbow"><h2 class="white">LGBT</h2></div>
+      </ion-slide>
+      <ion-slide>
+        <div class="box bg-royal"><h2 class="white">facts</h2></div>
+      </ion-slide>
+
+      <!-- SLIDE 8 LET'S START -->
+      <ion-slide>
+        <div class="box"><h2>Let's<br>start</h2></div>
+      </ion-slide>
+
+      <!-- SLIDE 9 LGBT -->
+      <ion-slide>
+        <div class="box bg-light">
+          <div>
+            The term <span class="biggest assertive">L</span><span class="biggest balanced">G</span><span class="biggest calm">B</span><span class="biggest positive">T</span> is a collective term and may include (among others):<br>
+            <div class="gender-caption">
+              <span class="bigger assertive">L</span><span class="bigger">esbians</span>
+            </div>
+            Women attracted to women
+            <div class="gender-caption">
+              <span class="bigger balanced">G</span><span class="bigger">ays</span>
+            </div>
+            Men attracted to men
+            <div class="gender-caption">
+              <span class="bigger calm">B</span><span class="bigger">isexual</span>
+            </div>
+            Not exclusively attracted to one gender
+            <div class="gender-caption">
+              <span class="bigger positive">T</span><span class="bigger">ranssexual</span>
+            </div>
+            Identifying with a different sex than the one assigned at birth
+            <div class="gender-caption">
+              <span class="bigger pink">Q</span><span class="bigger">ueer</span>
+            </div>
+            Questioning gender identity
+            <div class="gender-caption">
+              <span class="bigger royal">I</span><span class="bigger">ntersexual</span>
+            </div>
+            Sex characteristics of both sexes
+          </div>
+        </div>
+      </ion-slide>
+
+      <!-- SLIDE 10 POPULATION -->
+      <ion-slide>
+        <div class="box bg-light">
+          <div>
+            So just in case you forgot: This little fluffy ball is where we live. There is an estimated <span class="big">human population</span> of: <br><br>
+            <!-- <d3-bars bar-height="20" bar-padding="5" data="ctrl.d3BarsData"></d3-bars> -->
+
+            <img src="main/assets/images/globe.svg" width="100%">
+            <br><br>
+            <span class="biggest">7.2 billion people</span> <span class="cite">[1]</span>
+          </div>
+        </div>
+      </ion-slide>
+
+      <!-- SLIDE 11 GUESS LGBT POPULATION -->
+      <ion-slide>
+        <div class="box bg-light">
+          <div>
+            That's quite a lot!! In fact if you'd look every person 1 second in the eye, this would take you <span class="bold">228 years</span> (no breaks, no sleep, no food).
+            <br><br>
+            In case you'd have to guess (well, you actually have to):<br><br>
+            <span class="big">How long do you think it would take you to look the whole</span> <span class="big calm">LGBT population</span> <span class="big">in the eye?</span><br><br>
+            <div class="list">
+              <div class="item range range-calm">
+                <i class="icon ion-person calm"></i>
+                <input type="range" min="0" max="50"
+                  ng-model="ctrl.answers.lgbt">
+                <i class="icon ion-person-add calm"></i>
+              </div>
+              <br><br>
+              <span class="big">&nbsp;</span><span class="big" ng-if="ctrl.answers.lgbt">{{ctrl.answers.lgbt}} years</span><span class="big">&nbsp;</span>
+            </div>
+          </div>
+        </div>
+      </ion-slide>
+
+      <!-- SLIDE 12 LGBT POPULATION -->
+      <ion-slide>
+        <div class="box bg-light">
+          <div>
+          Recent studies show that approximately <span class="big">{{ctrl.lgbtData[0].count | number}} %</span> of the American population identifies as LBGT. <span class="cite">[2]</span> This number rises to <span class="big">16-21%</span> when accounting for LBGT attraction and/or behavior. <span class="cite">[3]</span> It would take you between <span class="big">8 and 48 years</span>.<br><br>
+            <pie-chart
+              data="ctrl.lgbtData"
+              colors="ctrl.lgbtColors">
+            </pie-chart>
+          </div>
+        </div>
+      </ion-slide>
+
+      <!-- SLIDE 13 GUESS SAME SEX MARRIAGE -->
+      <ion-slide>
+        <div class="box bg-light">
+          <div>
+            What do you think:<br><br>
+            <span class="big">How many people live in countries where</span> <span class="big pink">same sex marriage</span> <span class="big">is legal?</span><br><br>
+            <div class="list">
+              <div class="item range range-pink">
+                <i class="icon ion-person pink"></i>
+                <input type="range" min="0" max="7200000000"
+                  ng-model="ctrl.answers.marriage">
+                <i class="icon ion-person-add pink"></i>
+              </div>
+              <br><br>
+              <span class="big">&nbsp;</span><span class="big" ng-if="ctrl.answers.marriage">{{ctrl.answers.marriage | number}} people</span><span class="big">&nbsp;</span>
+            </div>
+          </div>
+        </div>
+      </ion-slide>
+
+      <!-- SLIDE 14 SAME SEX MARRIAGE -->
+      <ion-slide>
+        <div class="box bg-light">
+          <div>
+            About <span class="big">1.03 billion</span> people live in countries where <span class="big pink">same sex marriage</span> is legal. <span class="cite">[4]</span>
+            <br><br>
+            <pie-chart
+              data="ctrl.marriageData"
+              colors="ctrl.marriageColors">
+            </pie-chart>
+            <br><br>
+            This seems quite amazing, doesn't it?
+          </div>
+        </div>
+      </ion-slide>
+
+      <!-- SLIDE 15 SAME SEX MARRIAGE 2 -->
+      <ion-slide>
+        <div class="box bg-light">
+          <div>
+            Well, yes and no. Because this also means that most of the remaining <span class="big assertive">6.16 billion</span> peoples' governments (including Germany's) do not see all love as equal.
+            <br><br>
+                <i class="insaner icon ion-heart-broken assertive"></i>
+            <br><br>
+            This can even mean that LGBT individuals are not allowed to visit their loved ones in the hospital, even if they're the only family they have. Because technically <span class="big assertive">they're not family.</span>
+          </div>
+        </div>
+      </ion-slide>
+
+      <!-- SLIDE 16 GUESS ILLEGALIZATION -->
+      <ion-slide>
+        <div class="box bg-light">
+          <div>
+            Even worse. A lot of countries still have <span class="big royal">homosexuality criminalized.</span><br><br>
+            <span class="big">Guess how many people live in those countries:</span>
+            <br><br>
+            <div class="list">
+              <div class="item range range-royal">
+                <i class="icon ion-ios-bolt-outline royal"></i>
+                <input type="range" min="0" max="6160000000"
+                  ng-model="ctrl.answers.illegal">
+                <i class="icon ion-ios-bolt royal"></i>
+              </div>
+              <br><br>
+              <span class="big">&nbsp;</span><span class="big" ng-if="ctrl.answers.illegal">{{ctrl.answers.illegal | number}} people</span><span class="big">&nbsp;</span>
+            </div>
+          </div>
+        </div>
+      </ion-slide>
+
+      <!-- SLIDE 17 ILLEGAL -->
+      <ion-slide>
+        <div class="box bg-light">
+          <div>
+            A shocking <span class="big royal">2.9 billion</span> people live in countries where LBGT individuals are subject to <span class="big royal">discrimination by law</span>. <span class="cite">[5]</span>
+            <br><br>
+            <pie-chart
+              data="ctrl.illegalData"
+              colors="ctrl.illegalColors">
+            </pie-chart>
+            <br><br>
+            Another <span class="big dark">2.7 billions'</span> governments do <span class="big dark">not protect</span> the rights of LGBT. <span class="cite">[5]</span>
+          </div>
+        </div>
+      </ion-slide>
+
+      <!-- SLIDE 18 ILLEGAL 2 -->
+      <ion-slide>
+        <div class="box bg-light">
+          <div>
+            This results in the <span class="bold royal">impairment</span> of the most basic human rights like freedom of speech and up to life-time <span class="big royal">imprisonment</span> and even death by <span class="big royal">execution</span>.
+            <br><br>
+                <span class="insane flaticon-skeleton8 royal"></span>
+            <br><br>
+            For the other countries this means that usually <span class="big black">discrimination</span> remains <span class="big black">unpunished</span>. LGBT individuals may be publicly and openly discriminated, <span class="big black">stigmatized</span> and treated as <span class="big black">second class citizens</span>.
+            <br><br>
+                <span class="insane flaticon-electroshock dark"></span>
+            <br><br>
+          </div>
+        </div>
+      </ion-slide>
+
+      <!-- SLIDE 19 HAPPY -->
+      <ion-slide>
+        <div class="box bg-light">
+          <div>
+            This can change. Help us make the world a <span class="big">happier</span> place.
+            <br><br>
+                <span class="huge icon ion-android-happy assertive"></span>
+                <span class="huge icon ion-android-happy energized"></span>
+                <span class="huge icon ion-android-happy calm"></span>
+                <span class="huge icon ion-android-happy dark"></span>
+                <span class="huge icon ion-android-happy pink"></span>
+                <span class="huge icon ion-android-happy positive"></span>
+                <span class="huge icon ion-android-happy balanced"></span>
+                <span class="huge icon ion-android-happy royal"></span>
+            <br><br>
+          </div>
+        </div>
+      </ion-slide>
+
+      <!-- SLIDE 20 FEEL FESTIVAL -->
+      <ion-slide>
+        <div class="box bg-light">
+          <div>
+            Meet us at <span class="big">Feel Festival 2015</span>.
+            <br><br>
+                <span class="insanest flaticon-dancer5 calm"></span>
+            <br><br><br>
+            Join many others and take your picture for
+            <span class="big">equality</span>
+            <br><br>
+                <span class="insane icon ion-camera pink"></span>
+          </div>
+        </div>
+      </ion-slide>
+
+      <!-- SLIDE 21 FEEL FESTIVAL -->
+      <ion-slide>
+        <div class="box bg-light">
+          <div>
+            Find out where we are:
+            <br><br>
+            <div class="list info">
+              <a class="item item-icon-left item-icon-right"
+                href="http://facebook.com/feelthelove2015" target="_blank">
+                <i class="icon ion-social-facebook positive"></i>
+                Facebook
+                <i class="icon ion-chevron-right icon-accessory"></i>
+              </a>
+              <a class="item item-icon-left item-icon-right"
+                href="http://instagram.com/feelthelove2015" target="_blank">
+                <i class="icon ion-social-instagram pink"></i>
+                Instagram
+                <i class="icon ion-chevron-right icon-accessory"></i>
+              </a>
+              <a class="item item-icon-left item-icon-right"
+                href="http://twitter.com/feelthelove2015" target="_blank">
+                <i class="icon ion-social-twitter calm"></i>
+                Twitter
+                <i class="icon ion-chevron-right icon-accessory"></i>
+              </a>
+            </div>
+
+            Or:<br><br>
+            <div class="list info">
+              <a class="item item-icon-left item-icon-right"
+                ui-sref="info"
+                target="_blank">
+                <i class="icon ion-clipboard stabler"></i>
+                More info...
+                <i class="icon ion-chevron-right icon-accessory"></i>
+              </a>
+              <a class="item item-icon-left"
+                ng-click="ctrl.restart()">
+                <i class="icon ion-ios-refresh-empty"></i>
+                Restart
+              </a>
+            </div>
+          </div>
+        </div>
+      </ion-slide>
+
+    </ion-slide-box>
+  </ion-content>
+
+
+  <div class="bar bar-footer"
+    ng-if="ctrl.settings.showFooter">
+    <button class="button button-stable"
+      ng-click="ctrl.prev()">Previous</button>
+    <button class="button button-dark"
+      ng-disabled="ctrl.settings.nextDisabled"
+      ng-click="ctrl.next()">Next</button>
+  </div>
+</ion-view>
